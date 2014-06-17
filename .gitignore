@@ -4,4 +4,5 @@
 
 # Ignore built files
 assets/css/
-assets/imgs_src/*.{png,jpg,gif}
+assets/imgs_src/*
+!assets/imgs_src/README.md
