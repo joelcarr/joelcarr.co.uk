@@ -9,4 +9,4 @@ timezone: europe/london
 # Build settings
 markdown: kramdown
 permalink: pretty
-exclude: ['node_modules/', 'assets/scss/']
+exclude: ['node_modules/']
