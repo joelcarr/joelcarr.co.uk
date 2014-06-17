@@ -1,0 +1,7 @@
+# Ignore temp files
+.DS_Store
+.sass-cache
+
+# Ignore built files
+assets/css/
+assets/imgs_src/*.{png,jpg,gif}

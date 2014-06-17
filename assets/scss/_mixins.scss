@@ -1,0 +1,122 @@
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+
+  @keyframes $animation-name {
+    @content;
+  }
+
+  @-o-keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin transform($content) {
+  -webkit-transform: $content;
+     -moz-transform: $content;
+      -ms-transform: $content;
+       -o-transform: $content;
+          transform: $content;
+}
+
+@mixin transform-style($content) {
+  -webkit-transform-style: $content;
+     -moz-transform-style: $content;
+      -ms-transform-style: $content;
+       -o-transform-style: $content;
+          transform-style: $content;
+}
+
+@mixin backface-visibility($content) {
+  -webkit-backface-visibility: $content;
+     -moz-backface-visibility: $content;
+      -ms-backface-visibility: $content;
+       -o-backface-visibility: $content;
+          backface-visibility: $content;
+}
+
+@mixin perspective($content) {
+  -webkit-perspective: $content;
+     -moz-perspective: $content;
+      -ms-perspective: $content;
+       -o-perspective: $content;
+          perspective: $content;
+}
+
+// @mixin transition($transition-property, $transition-time, $method) {
+//     -webkit-transition: $transition-property $transition-time $method;
+//     -moz-transition: $transition-property $transition-time $method;
+//     -ms-transition: $transition-property $transition-time $method;
+//     -o-transition: $transition-property $transition-time $method;
+//     transition: $transition-property $transition-time $method;
+// }
+
+/* Vendor prefix transition 
+ * From: http://log.vieron.net/articles/sass-mixins-for-vendor-prefixed-transitions-including-properties/
+ */
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+    $vendor-prefixed-properties: transform background-clip background-size;
+    $result: ();
+    @each $prefix in $prefixes {
+       @if index($vendor-prefixed-properties, $property) {
+         $property: -#{$prefix}-#{$property}
+       }
+       $result: append($result, $property);
+    }
+    @return $result;
+}
+ 
+@function trans-prefix($transition, $prefix: moz) {
+    $prefixed: ();
+    @each $trans in $transition {
+        $prop-name: nth($trans, 1);
+        $vendor-prop-name: prefix($prop-name, $prefix);
+        $prop-vals: nth($trans, 2);
+        $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+    }
+    
+    @return $prefixed;
+}
+ 
+ 
+@mixin transition($values...) { 
+    $transitions: ();
+    @each $declaration in $values {
+        $prop: nth($declaration, 1);
+        $prop-opts: ();
+        $length: length($declaration);
+        @for $i from 2 through $length {
+            $prop-opts: append($prop-opts, nth($declaration, $i));   
+        }
+        $trans: ($prop, $prop-opts);
+        $transitions: append($transitions, $trans, comma);
+    }
+      
+    -webkit-transition: trans-prefix($transitions, webkit);
+    -moz-transition: trans-prefix($transitions, moz);
+    -o-transition: trans-prefix($transitions, o);
+    transition: $values;
+}
+
+/* css triangle */
+@mixin triangle($dir, $size, $color) {
+    border: $size transparent solid;
+ 
+    @if ($dir == "top" or $dir == "up") {
+        border-bottom-color: $color;
+    }
+    @else if ($dir == "right" or $dir == "after") {
+        border-left-color: $color;
+    }
+    @else if ($dir == "bottom" or $dir == "down") {
+        border-top-color: $color;
+    }
+    @else if ($dir == "left" or $dir == "before") {
+        border-right-color: $color;
+    }
+}

@@ -1,10 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Joel Carr Frontend Developer
+email: joel.ben.carr@gmail.com
+description: "Joel Carr is working as a Frontend developer based in London. In this site you can see examples of his work."
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://joelcarr.github.io"
+timezone: europe/london
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+exclude: ['node_modules/', 'assets/scss/']
