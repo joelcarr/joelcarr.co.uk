@@ -1,6 +1,8 @@
 # Ignore temp files
 .DS_Store
 .sass-cache
+.npm-debug.log
+node_modules/
 
 # Ignore built files
 assets/imgs_src/*
