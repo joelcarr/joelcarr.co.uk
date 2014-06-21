@@ -1,3 +1,5 @@
+/* globals window, document */
+
 'use strict';
 
 require.config({
