@@ -4,31 +4,23 @@ layout: default
 
 <div class="home">
 
-    <section class="about">
-
+    <section class="introduction content-padded">
+        <h1>Joel Carr</h1>
+        <p class="subheading">Frontend developer / all round tinkerer</p>
+        <p>Hello, my name is Joel. I am currently a frontend developer are creative advertising agency <a href="//thisisdare.com/">Dare</a>.</p>
     </section>
 
-    <h2>Posts</h2>
-
-    <ul class="posts">
-        {% for post in site.posts %}
-        <li>
-            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-
-    <h2>Projects</h2>
-    <ul class="posts">
-        {% for post in site.categories['project'] %}
-        <li>
-            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <section class="projects">
+        <h2 class="content-padded">Here are some projects I have worked on:</h2>
+        <ul class="projects-list unstyled-list">
+            {% for post in site.categories['project'] %}
+            <li>
+                <a class="project {{ post.colors }}" href="{{ post.url | prepend: site.baseurl }}">
+                    <span class="project-title">{{ post.title }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 
 </div>
