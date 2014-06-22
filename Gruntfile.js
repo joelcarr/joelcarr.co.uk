@@ -5,6 +5,11 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        /**
+         * How to use jekyll and livereload:
+         * http://kctang.github.io/jekyll/livereload/2014/01/25/github-pages-with-jekyll-and-livereload.html/
+         */
+
         shell: {
             jekyllBuild: {
                 command: 'jekyll build'
