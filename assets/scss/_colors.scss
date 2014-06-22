@@ -1,0 +1,22 @@
+$white: #ffffff;
+$black: #2c2c2c;
+
+// Client colours
+$barclays-brand-color: #00aeef;
+$bmw-brand-color: #1c69d4;
+$postoffice-brand-color: #d8242f;
+
+.barclays {
+    background-color: $barclays-brand-color;
+    color: $white;
+}
+
+.bmw {
+    background-color: $bmw-brand-color;
+    color: $white;
+}
+
+.postoffice {
+    background-color: $postoffice-brand-color;
+    color: $white;
+}

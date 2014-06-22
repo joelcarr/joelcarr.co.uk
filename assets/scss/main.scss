@@ -6,4 +6,8 @@
 
 @import "typography";
 
-@import "app";
+@import "app",
+        "colors";
+
+@import "cpt-projects",
+        "cpt-footer";
