@@ -3,26 +3,46 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
-        // read in the project settings from package.json into pkg propert. This allows us to refer
-        // to the values of properties within our package.json
         pkg: grunt.file.readJSON('package.json'),
 
-        // the configuration object for a task lives as a property on the configuration object,
-        // that's named the same as the task - so 'watch' task goes in our config object under the 'watch' key
+        shell: {
+            jekyllBuild: {
+                command: 'jekyll build'
+            }
+        },
 
-        // watch task detects changes to files and runs specified tasks
+        connect: {
+            server: {
+                options: {
+                    port: 8080,
+                    base: '_site'
+                }
+            }
+        },
+
         watch: {
-            // livereload: {
-            //     options: {
-            //         livereload: true
-            //     }
-            // },
+            livereload: {
+                files: [
+                    '_config.yml',
+                    'index.html',
+                    '_layouts/**',
+                    '_posts/**',
+                    '_includes/**',
+                    'assets/css/**',
+                    'assets/imgs/**',
+                    'assets/js/**'
+                ],
+                tasks: ['shell:jekyllBuild'],
+                options: {
+                    livereload: true
+                },
+            },
             scss: {
                 files: 'assets/scss/**/*.scss',
                 tasks: ['sass'],
-                // options: {
-                //     livereload: false
-                // }
+                options: {
+                    livereload: false
+                }
             },
             images: {
                 files: 'assets/imgs_src/**/*.{png,jpg,gif}',
@@ -32,9 +52,6 @@ module.exports = function(grunt) {
                 files: 'assets/js/**/*.js',
                 tasks: ['jshint'],
             },
-            // css: {
-            //     files: 'assets/css/main.css'
-            // }
         },
 
         sass: {
@@ -74,9 +91,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask('default', [
+        'shell',
+        'connect',
         'watch'
     ]);
-
 };
