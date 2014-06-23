@@ -24,9 +24,14 @@
         text-align: center;
     }
 
+    .project-title {
+        margin-top: 0;
+    }
+
     .project-image {
+        display: inline-block;
         max-width: 610px;
-        margin: 0 auto;
+        margin: 0 auto 1em;
         border: 5px solid $grey-light;
         line-height: 0;
 
@@ -35,6 +40,10 @@
             height: auto;
         }
 
+    }
+
+    .button {
+        margin-top: 1em;
     }
 
 }
