@@ -1,3 +1,43 @@
 footer {
-    margin-top: 20px;
+    padding: 1em;
+    background-color: $black;
+    color: $white;
+
+    a {
+        color: $white;
+        border: none;
+    }
+
+}
+
+.footer-social {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        padding: 0 0.5em;
+        border-radius: 10px;
+        padding-top: 0.15em;
+    }
+
+    .github:hover {
+        background-color: $github-brand-color;
+        color: $black;
+    }
+
+    .linkedin:hover {
+        background-color: $linkedin-brand-color;
+        color: $white;
+    }
+
+    .twitter:hover {
+        background-color: $white;
+        color: $twitter-brand-color;
+    }
+
 }
