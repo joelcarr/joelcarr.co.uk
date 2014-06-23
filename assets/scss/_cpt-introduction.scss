@@ -1,0 +1,29 @@
+.introduction {
+    position: relative;
+    margin-top: 1em;
+
+    .introduction-headshot {
+        border: solid 5px $black;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        width: 175px;
+
+        @include transition(width 500ms ease, border-width 500ms ease);
+
+        &:hover {
+            width: 250px;
+            border-width: 10px;
+        }
+
+        @include min-screen($res-tablet) {
+            width: 250px;
+            height: auto;
+
+            &:hover {
+                width: 300px;
+            }
+        }
+    }
+
+}

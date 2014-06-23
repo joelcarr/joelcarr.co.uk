@@ -9,10 +9,6 @@ body {
     list-style: none;
 }
 
-.content-padded {
-    padding: 0 20px;
-}
-
 .button {
     display: block;
     padding: .5em;
@@ -26,10 +22,6 @@ body {
     @include min-screen($res-tablet) {
         display: inline-block;
         padding: 1em 4em;
-    }
-
-    @include min-screen($res-desktop) {
-        padding: 1em;
     }
 
     &:hover,

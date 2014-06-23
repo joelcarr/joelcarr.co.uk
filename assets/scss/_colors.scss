@@ -1,5 +1,6 @@
 $white: #ffffff;
 $black: #2c2c2c;
+$grey: #6e6e6e;
 $grey-light: #c3c3c3;
 
 // Client colours
@@ -11,7 +12,6 @@ $sainsburys-brand-color: #ef6600;
 
 .barclays {
     background-color: $barclays-brand-color;
-    color: $white;
 
     .button {
         background-color: $barclays-brand-color;
@@ -28,7 +28,6 @@ $sainsburys-brand-color: #ef6600;
 
 .dare {
     background-color: $dare-brand-color;
-    color: $white;
 
     .button {
         background-color: $dare-brand-color;
@@ -45,7 +44,6 @@ $sainsburys-brand-color: #ef6600;
 
 .bmw {
     background-color: $bmw-brand-color;
-    color: $white;
 
     .button {
         background-color: $bmw-brand-color;
@@ -62,7 +60,6 @@ $sainsburys-brand-color: #ef6600;
 
 .postoffice {
     background-color: $postoffice-brand-color;
-    color: $white;
 
     .button {
         background-color: $postoffice-brand-color;
@@ -79,7 +76,6 @@ $sainsburys-brand-color: #ef6600;
 
 .sainsburys {
     background-color: $sainsburys-brand-color;
-    color: $white;
 
     .button {
         background-color: $sainsburys-brand-color;

@@ -27,19 +27,17 @@ p {
 }
 
 a {
-    color: $white;
-    background-color: $black;
+    color: $black;
     font-weight: bold;
-    padding: 2px;
-    border: 1px solid $black;
+    padding-bottom: 2px;
+    border-bottom: 2px dotted $black;
     text-decoration: none;
-    @include transition(color 250ms ease, background-color 250ms ease);
+    @include transition(color 250ms ease, background-color 250ms ease, border-color 250ms ease);
 
     &:hover,
     &:active,
     &:focus {
-        color: $black;
-        background-color: $white;
-        text-decoration: none;
+        color: $grey;
+        border-color: $white;
     }
 }

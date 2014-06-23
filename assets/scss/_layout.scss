@@ -1,5 +1,5 @@
 $res-mobile: 480px;
-$res-tablet: 780px;
+$res-tablet: 640px;
 $res-desktop: 960px;
 
 *, *:before, *:after {
@@ -14,4 +14,10 @@ $res-desktop: 960px;
 
 .clearfix:after {
     clear: both;
+}
+
+.container {
+    max-width: 1024px;
+    padding: 0 1em;
+    margin: 0 auto;
 }
