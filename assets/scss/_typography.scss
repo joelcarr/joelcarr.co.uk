@@ -1,10 +1,42 @@
-// @font-face {
-//     font-family: 'fontname';
-//     font-weight: normal;
-//     font-style: normal;
-//     src: url('../fonts/fontname.eot');
-//     src: url('../fonts/fontname.eot?#iefix') format('embedded-opentype'),
-//         url('../fonts/fontname.woff') format('woff'),
-//         url('../fonts/fontname.ttf') format('truetype'),
-//         url('../fonts/fontname.svg#wf') format('svg');
-// }
+$type-sans-serif: 'Droid Sans', sans-serif;
+$type-serif: 'Droid Serif', serif;
+
+body {
+    font-family: $type-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $type-sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+a {
+    color: #4da4a4;
+    font-weight: bold;
+    padding: 2px;
+    @include transition(color 250ms ease, background-color 250ms ease);
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $black;
+        background-color: #66cccc;
+        text-decoration: none;
+    }
+}
