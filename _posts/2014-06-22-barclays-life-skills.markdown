@@ -3,6 +3,8 @@ layout: post
 title:  "Barclays Life Skills"
 date:   2014-06-22 12:50:00
 colors: "barclays"
+image: "barclays-life-skills.jpg"
+site: "https://www.barclayslifeskills.com/"
 categories: 
 - project 
 ---
