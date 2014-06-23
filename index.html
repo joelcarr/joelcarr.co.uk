@@ -4,20 +4,24 @@ layout: default
 
 <div class="home">
 
-    <section class="introduction content-padded">
-        <h1>Joel Carr</h1>
-        <p class="subheading">Frontend developer / all round tinkerer</p>
-        <p>Hello, my name is Joel. I am currently a frontend developer are creative advertising agency <a href="//thisisdare.com/">Dare</a>.</p>
-    </section>
+    <header class="introduction content-padded">
+        <h1>Joel Carr - Frontend developer</h1>
+        <p>Hello, my name is Joel. I am currently a frontend developer (and an all round tinkerer) at creative advertising agency <a href="//thisisdare.com/">Dare</a>.</p>
+    </header>
 
     <section class="projects">
         <h2 class="content-padded">Here are some projects I have worked on:</h2>
         <ul class="projects-list unstyled-list">
             {% for post in site.categories['project'] %}
-            <li>
-                <a class="project {{ post.colors }}" href="{{ post.url | prepend: site.baseurl }}">
-                    <span class="project-title">{{ post.title }}</span>
-                </a>
+            <li class="project {{ post.colors }}">
+                <div class="project-container">
+                    <h3>{{ post.title }}</h3>
+                    <div class="project-image">
+                        <img src="/assets/imgs/projects/{{post.image}}" alt=""/>
+                    </div>
+                    {{ post.content }}
+                    <a href="{{ post.site }}" target="_blank" class="button">Visit site</a>
+                </div>
             </li>
             {% endfor %}
         </ul>
