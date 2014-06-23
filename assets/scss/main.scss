@@ -4,10 +4,11 @@
 
 @import "layout";
 
+@import "colors";
+
 @import "typography";
 
-@import "app",
-        "colors";
+@import "app";
 
 @import "cpt-projects",
         "cpt-footer";

@@ -1,22 +1,95 @@
 $white: #ffffff;
 $black: #2c2c2c;
+$grey-light: #c3c3c3;
 
 // Client colours
 $barclays-brand-color: #00aeef;
 $bmw-brand-color: #1c69d4;
+$dare-brand-color: #ff0099;
 $postoffice-brand-color: #d8242f;
+$sainsburys-brand-color: #ef6600;
 
 .barclays {
     background-color: $barclays-brand-color;
     color: $white;
+
+    .button {
+        background-color: $barclays-brand-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $barclays-brand-color;
+        }
+
+    }
+
+}
+
+.dare {
+    background-color: $dare-brand-color;
+    color: $white;
+
+    .button {
+        background-color: $dare-brand-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $dare-brand-color;
+        }
+        
+    }
+
 }
 
 .bmw {
     background-color: $bmw-brand-color;
     color: $white;
+
+    .button {
+        background-color: $bmw-brand-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $bmw-brand-color;
+        }
+        
+    }
+
 }
 
 .postoffice {
     background-color: $postoffice-brand-color;
     color: $white;
+
+    .button {
+        background-color: $postoffice-brand-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $postoffice-brand-color;
+        }
+        
+    }
+
+}
+
+.sainsburys {
+    background-color: $sainsburys-brand-color;
+    color: $white;
+
+    .button {
+        background-color: $sainsburys-brand-color;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $sainsburys-brand-color;
+        }
+        
+    }
+
 }

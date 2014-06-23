@@ -13,3 +13,22 @@ body {
 .content-padded {
     padding: 0 20px;
 }
+
+.button {
+    display: inline-block;
+    padding: .5em;
+    border: 1px solid $white;
+
+    font-size: 1.25em;
+    margin: 1em 0;
+    text-decoration: none;
+    background-color: $black;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $white;
+        color: $black;
+    }
+}
