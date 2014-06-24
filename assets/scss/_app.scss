@@ -31,3 +31,19 @@ body {
         color: $black;
     }
 }
+
+.list-skills {
+    @extend .clearfix;
+
+    li {
+        width: 50%;
+        float: left;
+        padding-right: 2em;
+
+        @include min-screen($res-tablet) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+
+}
