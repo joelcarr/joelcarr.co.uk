@@ -9,6 +9,4 @@ categories:
 - project 
 ---
 
-In the summer of 2012, the Post Office released their new rebrand, to which I had worked on the front end of their new [site][visit-site].
-
-[visit-site]: http://www.postoffice.co.uk/
+The Post Office new site launch was my first big project at Dare, and the perfect project to kick me off in the agency world. The site was required to meet level Triple-A Conformance to Web Content Accessibility. I worked with a accessibility expert to make sure each component met the require meets of users with impaired vision / hearing / coordination.

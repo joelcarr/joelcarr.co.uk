@@ -9,6 +9,4 @@ categories:
 - project 
 ---
 
-The [Become Electric][visit-site] site had a range of modules that were put live over a period of time till the BMW i3 luanch.
-
-[visit-site]: https://www.becomeelectric.co.uk/
+BMW Ultimate Driver is a Facebook applications that puts users to the test to see if they can assess and react to racing situations. I built the mobile version of the application (built off backbone.js) and also helped concept how it would we could assess the users reactions with limited interaction.
