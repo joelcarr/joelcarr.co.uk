@@ -34,6 +34,12 @@ a {
     text-decoration: none;
     @include transition(color 250ms ease, background-color 250ms ease, border-color 250ms ease);
 
+    &.dare {
+        background-color: transparent;
+        color: $dare-brand-color;
+        border-color: $dare-brand-color;
+    }
+
     &.github {
         color: #eba983;
         border-color: #eba983;
