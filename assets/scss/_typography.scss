@@ -34,14 +34,19 @@ a {
     text-decoration: none;
     @include transition(color 250ms ease, background-color 250ms ease, border-color 250ms ease);
 
-    &.twitter {
-        color: $twitter-brand-color;
-        border-color: $twitter-brand-color;
-    }
-
     &.github {
         color: #eba983;
         border-color: #eba983;
+    }
+
+    &.linkedin {
+        color: $linkedin-brand-color;
+        border-color: $linkedin-brand-color;
+    }
+
+    &.twitter {
+        color: $twitter-brand-color;
+        border-color: $twitter-brand-color;
     }
 
     &:hover,
