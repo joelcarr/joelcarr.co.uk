@@ -8,8 +8,9 @@
         
         <item>
             <title>Sainsbury&#39;s Inspiration</title>
-            <description>&lt;p&gt;Some copy about the Sainsbury’s Inspiration site…… vist &lt;a href=&quot;http://inspiration.sainsburys-live-well-for-less.co.uk/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+            <description>&lt;p&gt;Sainsbury’s wanted a new content driven site for the countdown to Christmas day with featured daily homepages showing recipes, articles, and video content. I was responsible for Wordpress backend and the responsive frontend.&lt;/p&gt;
 
+&lt;p&gt;After Christmas, Sainsbury’s loved the site so much that they have decided to keep it for another two years. Fortunately we had anticipated this, we developed our team’s Git workflow that worked with Jenkins for automated deployments between environments for our releases.&lt;/p&gt;
 </description>
             <pubDate>Mon, 23 Jun 2014 22:10:00 +0100</pubDate>
             <link>http://joelcarr.github.io/project/2014/06/23/sainsburys-inspiration/</link>
@@ -18,7 +19,9 @@
         
         <item>
             <title>Barclays Life Skills</title>
-            <description>&lt;p&gt;Last year in spring, Barclays released a new initive called Life Skills. Barclays wanted to help teenagers gain vitial skills in a varity of areas such as investing, education, and careers. I was the tech lead for the interactive &lt;a href=&quot;https://www.barclayslifeskills.com/key-skills/getting-to-know-yourself/wheel-of-strengths/&quot;&gt;modules&lt;/a&gt; that taught users the skills they needed.&lt;/p&gt;
+            <description>&lt;p&gt;Last year in spring, Barclays released a new initiative called Life Skills. Barclays wanted to help teenagers gain vital skills in a variety of areas such as investing, education, and careers. I was the tech lead for the interactive &lt;a href=&quot;https://www.barclayslifeskills.com/key-skills/getting-to-know-yourself/wheel-of-strengths/&quot; target=&quot;_blank&quot;&gt;modules&lt;/a&gt; that taught users the skills they needed. Each module needed to be visually impressive as the subject matter for the audience is not taken lightly. This allowed myself to play with CSS3 animations and Canvas.&lt;/p&gt;
+
+&lt;p&gt;We decided the second lot of modules should be streamlined with each other. We built a backbone application to set standard shared rules for each module which could be extended for the individual interactions required.&lt;/p&gt;
 
 </description>
             <pubDate>Sun, 22 Jun 2014 13:50:00 +0100</pubDate>
@@ -28,8 +31,9 @@
         
         <item>
             <title>Dare website</title>
-            <description>&lt;p&gt;Some copy about the Dare site…… vist &lt;a href=&quot;http://www.thisisdare.com/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+            <description>&lt;p&gt;I have been prototyping and adding modules for the Dare site along with the rest of the team in our downtime. With our updated Git workflow and automated deployment system, it became really easy for our team to make quick changes / build a new module for the site.&lt;/p&gt;
 
+&lt;p&gt;Recently Dare has had a rebrand which required changes to the site. Thankfully, with the use of SASS variables we were able to update the colour scheme in no time. For the rebrand I also got to work on the video / image carousel.&lt;/p&gt;
 </description>
             <pubDate>Sun, 22 Jun 2014 13:40:00 +0100</pubDate>
             <link>http://joelcarr.github.io/project/2014/06/22/dare-website/</link>
@@ -37,19 +41,17 @@
         </item>
         
         <item>
-            <title>BMW Become Electric</title>
-            <description>&lt;p&gt;The &lt;a href=&quot;https://www.becomeelectric.co.uk/&quot;&gt;Become Electric&lt;/a&gt; site had a range of modules that were put live over a period of time till the BMW i3 luanch.&lt;/p&gt;
-
+            <title>BMW Ultimate Driver</title>
+            <description>&lt;p&gt;BMW Ultimate Driver is a Facebook applications that puts users to the test to see if they can assess and react to racing situations. I built the mobile version of the application (built off backbone.js) and also helped concept how it would we could assess the users reactions with limited interaction.&lt;/p&gt;
 </description>
             <pubDate>Sun, 22 Jun 2014 13:26:00 +0100</pubDate>
-            <link>http://joelcarr.github.io/project/2014/06/22/BMW-become-electric/</link>
-            <guid isPermaLink="true">http://joelcarr.github.io/project/2014/06/22/BMW-become-electric/</guid>
+            <link>http://joelcarr.github.io/project/2014/06/22/BMW-ultimate-driver/</link>
+            <guid isPermaLink="true">http://joelcarr.github.io/project/2014/06/22/BMW-ultimate-driver/</guid>
         </item>
         
         <item>
             <title>Post Office Website</title>
-            <description>&lt;p&gt;In the summer of 2012, the Post Office released their new rebrand, to which I had worked on the front end of their new &lt;a href=&quot;http://www.postoffice.co.uk/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
-
+            <description>&lt;p&gt;The Post Office new site launch was my first big project at Dare, and the perfect project to kick me off in the agency world. The site was required to meet level Triple-A Conformance to Web Content Accessibility. I worked with a accessibility expert to make sure each component met the require meets of users with impaired vision / hearing / coordination.&lt;/p&gt;
 </description>
             <pubDate>Sun, 22 Jun 2014 13:22:00 +0100</pubDate>
             <link>http://joelcarr.github.io/project/2014/06/22/post-office-website/</link>
