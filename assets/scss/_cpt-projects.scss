@@ -30,7 +30,7 @@
     font-family: $type-sans-serif;
     color: $white;
 
-    li {
+    > li {
         display: block;
         width: 100%;
     }
@@ -64,6 +64,16 @@
         img {
             width: 100%;
             height: auto;
+        }
+
+    }
+
+    .project-skills {
+        @extend .clearfix;
+        font-weight: bold;
+
+        li {
+            display: inline-block;
         }
 
     }
