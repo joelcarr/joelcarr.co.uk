@@ -7,8 +7,14 @@ image: "dare.jpg"
 site: "http://www.thisisdare.com/"
 categories: 
 - project 
+skills:
+- Responsive
+- CSS3 animations
+- HTML5 Video
+- Continuous integration
+- Expression Engine
+- LESS
+- Require.js
 ---
 
-I have been prototyping and adding modules for the Dare site along with the rest of the team in our downtime. With our updated Git workflow and automated deployment system, it became really easy for our team to make quick changes / build a new module for the site.
-
-Recently Dare has had a rebrand which required changes to the site. Thankfully, with the use of SASS variables we were able to update the colour scheme in no time. For the rebrand I also got to work on the video / image carousel.
+The Dare site has been an ongoing project for everyone in my team. Due to our continuous integration approach, we have a backlog of features and bugs. I go through the backlog grouping relevant features and bugs into a new release.
