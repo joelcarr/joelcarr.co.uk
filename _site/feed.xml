@@ -8,9 +8,9 @@
         
         <item>
             <title>Sainsbury's Inspiration</title>
-            <description>&lt;p&gt;Sainsbury’s wanted a new content driven site for the countdown to Christmas day with featured daily homepages showing recipes, articles, and video content. I was responsible for Wordpress backend and the responsive frontend.&lt;/p&gt;
+            <description>&lt;p&gt;Sainsbury’s wanted a new content-driven site for the countdown to Christmas Day with featured daily homepages showing recipes, articles, and video content. I was responsible for the Wordpress back-end and the responsive front-end.&lt;/p&gt;
 
-&lt;p&gt;After Christmas, Sainsbury’s loved the site so much that they have decided to keep it for another two years. Fortunately we had anticipated this, we developed our team’s Git workflow that worked with Jenkins for automated deployments between environments for our releases.&lt;/p&gt;
+&lt;p&gt;After Christmas, Sainsbury’s loved the site so much that they have decided to keep it for another two years. Because we had developed our team’s Git workflow, that worked with Jenkins for automated deployments between environments, it was easy to work on multiple versions of the site simultaneously.&lt;/p&gt;
 </description>
             <pubDate>Mon, 23 Jun 2014 22:10:00 +0100</pubDate>
             <link>http://joelcarr.github.io/project/2014/06/23/sainsburys-inspiration/</link>
@@ -19,9 +19,7 @@
         
         <item>
             <title>Barclays Life Skills</title>
-            <description>&lt;p&gt;Last year in spring, Barclays released a new initiative called Life Skills. Barclays wanted to help teenagers gain vital skills in a variety of areas such as investing, education, and careers. I was the tech lead for the interactive &lt;a href=&quot;https://www.barclayslifeskills.com/key-skills/getting-to-know-yourself/wheel-of-strengths/&quot; target=&quot;_blank&quot;&gt;modules&lt;/a&gt; that taught users the skills they needed. Each module needed to be visually impressive as the subject matter for the audience is not taken lightly. This allowed myself to play with CSS3 animations and Canvas.&lt;/p&gt;
-
-&lt;p&gt;We decided the second lot of modules should be streamlined with each other. We built a backbone application to set standard shared rules for each module which could be extended for the individual interactions required.&lt;/p&gt;
+            <description>&lt;p&gt;Barclays Life Skills helps teenagers gain vital skills in a variety of areas such as money skills, education, and careers. I was the tech lead for the interactive &lt;a href=&quot;https://www.barclayslifeskills.com/key-skills/getting-to-know-yourself/wheel-of-strengths/&quot; target=&quot;_blank&quot;&gt;modules&lt;/a&gt; illustrated and enlivened the lesson. To lighten up the lessons, the modules were highly interactive and visually impressive. I found it particularly fun and rewarding to work with CSS3 animations and Canvas for these modules.&lt;/p&gt;
 
 </description>
             <pubDate>Sun, 22 Jun 2014 13:50:00 +0100</pubDate>
@@ -31,9 +29,7 @@
         
         <item>
             <title>Dare website</title>
-            <description>&lt;p&gt;I have been prototyping and adding modules for the Dare site along with the rest of the team in our downtime. With our updated Git workflow and automated deployment system, it became really easy for our team to make quick changes / build a new module for the site.&lt;/p&gt;
-
-&lt;p&gt;Recently Dare has had a rebrand which required changes to the site. Thankfully, with the use of SASS variables we were able to update the colour scheme in no time. For the rebrand I also got to work on the video / image carousel.&lt;/p&gt;
+            <description>&lt;p&gt;The Dare site has been an ongoing project for everyone in my team. Due to our continuous integration approach, we have a backlog of features and bugs. I go through the backlog grouping relevant features and bugs into a new release.&lt;/p&gt;
 </description>
             <pubDate>Sun, 22 Jun 2014 13:40:00 +0100</pubDate>
             <link>http://joelcarr.github.io/project/2014/06/22/dare-website/</link>
