@@ -6,6 +6,10 @@ node_modules/
 
 # Ignore built files
 assets/imgs_src/*
+_site/
 
 # But DON'T ignore these files
 !assets/imgs_src/README.md
+
+# Ignore these unnecessary files
+TODO.md
