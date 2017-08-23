@@ -1,68 +1,133 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Joel Carr | Contract Front End Developer</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="UK based contract Front End Developer with over 5 years experience in product startups and fast-paced creative digital agencies">
+ 
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
 
-<div class="home">
-
-    <header class="introduction container">
-        
-        <img src="/assets/imgs/me_250x250.jpg" alt="" class="introduction-headshot">
-        
-        <div class="row">
-
-            <div class="introduction-myself col-8">
-                
-                <h1>Hello! I am Joel.</h1>
-
-                <p>I am a front-end developer at creative advertising agency <a href="//thisisdare.com/" class="dare" target="_blank">Dare</a> based in central London. Although I focus in front-end development, I dabble with any technologies I can get my hands on. I have worked on all kinds of projects such as large-scale websites, phonegap applications, and iAds to name a few.</p>
-
-                <p>When I am trying to learn new things, I have started to put them onto my <a href="http://www.github.com/joelcarr" class="github" target="_blank">GitHub</a>. I also ramble about my experiments and food on <a href="http://twitter.com/joelcarr" class="twitter" target="_blank">Twitter</a> as well. If you would like to get in touch with me directly, send me an <a href="mailto:joel.ben.carr+website@gmail.com" target="_blank">email</a>. You could also have a look at my professional experience on my <a href="/joelcarr-cv.pdf" target="_blank">CV</a> or <a href="http://www.linkedin.com/profile/view?id=78407873" class="linkedin" target="_blank">LinkedIn</a>.</p>
-            
+<body>
+    <header>
+        <h1>Joel Carr</h1>
+        <dl>
+            <div>
+                <dt>Email:</dt>
+                <dd><a href="mailto:joel@joelcarr.co.uk">joel@joelcarr.co.uk</a></dd>
             </div>
-
-            <div class="intoduction-myskills col-4">
-                <h3>What I work with:</h3>
-                <ul class="list-skills">
-                    <li>HTML5</li>
-                    <li>CSS3 / SASS</li>
-                    <li>JavaScript</li>
-                    <li>Backbone.js</li>
-                    <li>PHP</li>
-                    <li>CodeIgniter</li>
-                    <li>Wordpress</li>
-                    <li>Grunt</li>
-                    <li>Git (GitHub / GitLab)</li>
-                    <li>API integration (such as Facebook, Twitter, and Google)</li>
-                </ul>
+            <div>
+                <dt>Github:</dt>
+                <dd><a href="https://github.com/joelcarr">https://github.com/joelcarr</a></dd>
             </div>
-
-        </div>
-
+        </dl>
     </header>
 
-    <section class="projects">
-        <h2>Here are some of the projects I have worked on:</h2>
-        <ul class="projects-list unstyled-list">
-            {% for post in site.categories['project'] %}
-            <li class="project {{ post.colors }}">
-                <div class="project-container">
-                    <h3 class="project-title">{{ post.title }}</h3>
-                    <div class="project-image">
-                        <img src="/assets/imgs/projects/{{post.image}}" alt=""/>
-                    </div>
-                    {{ post.content }}
-                    <ul class="unstyled-list project-skills">
-                        {% for skill in post.skills %}
-                            <li>
-                            {{skill}}{% if forloop.index != forloop.length %},{% else %}.{% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                    <a href="{{ post.site }}" target="_blank" class="button">Visit site</a>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
+    <main>
+        <section id="personal-statement">
+            <h2>Personal Statement</h2>
+            <p>I am a contract Front End Developer with over 5 years experience in product startups and fast-paced creative digital agencies. My ability to quickly learn new coding practices and environments aids the delivery of advanced and high quality products for my clients and their users. I am currently <a href="mailto:joel@joelcarr.co.uk">available</a> for new contracts.</p>
+        </section>
 
-</div>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <ul class="unstyled-list">
+                <li>
+                    <h3><a href="https://www.beamly.com/">Beamly</a> <small>(January 2017 - June 2017)</small></h3>
+                    <dl>
+                        <div>
+                            <dt>Role:</dt>
+                            <dd>Front End Developer</dd>
+                        </div>
+                        <div>
+                            <dt>Skills:</dt>
+                            <dd>Babel, Chai, Cucumber, ES6, ESLint, Gulp, Mocha, Node, SASS, Stylelint</dd>
+                        </div>
+                    </dl>
+                    <p>Working as part of a “delivery team” ensuring the delivery of fast performant, accessible, high quality websites for brands such as Max Factor and Escada. As part of my role, I helped maintain and deliver components for the in-house library.</p>
+                </li>
+                <li>
+                    <h3><a href="https://www.livestax.com/">Livestax</a> <small>(July 2016 - January 2017)</small></h3>
+                    <dl>
+                        <div>
+                            <dt>Role:</dt>
+                            <dd>Front End Developer</dd>
+                        </div>
+                        <div>
+                            <dt>Skills:</dt>
+                            <dd>Angular 1.x, Cucumber, ESLint, Mocha, Rails, SASS, Sinon, Stylelint</dd>
+                        </div>
+                    </dl>
+                    <p>I was responsible for updating the Angular application to use recent practices along with building and maintaining a public JS API / theme. As a product team, I worked very closely with the client with fortnightly show &amp; tell updates.</p>
+                </li>
+                <li>
+                    <h3><a href="https://en.wikipedia.org/wiki/RefME">RefME</a> <small>(January 2015 - July 2016)</small></h3>
+                    <dl>
+                        <div>
+                            <dt>Role:</dt>
+                            <dd>Front End Developer</dd>
+                        </div>
+                        <div>
+                            <dt>Skills:</dt>
+                            <dd>Angular 1.x, Chrome Extension Development, Cucumber, ESLint, Grunt, Heroku, Jasmine, Node, Rails, SASS, Wordpress</dd>
+                        </div>
+                    </dl>
+                    <p>I built the UI for an application with a fast growing user-base and maintained the Rails API along with a few Node microservices. I ensured to use the latest practices to deliver the best performance. The Angular applications were written in a TDD approach.</p>
+                </li>
+                <li>
+                    <h3><a href="https://thisisdare.com/">Dare</a> <small>(July 2012 - January 2015)</small></h3>
+                    <dl>
+                        <div>
+                            <dt>Role:</dt>
+                            <dd>Developer</dd>
+                        </div>
+                        <div>
+                            <dt>Skills:</dt>
+                            <dd>Backbone, Canvas, CodeIgniter, iAd development, Level AAA Conformance to Web Content Accessibility Guidelines, Umbraco, Wordpress</dd>
+                        </div>
+                    </dl>
+                    <p>I worked on the successful delivery, sometimes as Tech Lead, on a range projects for well known organisations like Sainsbury’s, Barclays, The FA, and Post Office.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul class="unstyled-list">
+                <li>
+                    <h3>BA (Hons) First Class Honours,  Interactive Media Production</h3>
+                    <dl>
+                        <div>
+                            <dt>University:</dt>
+                            <dd>Bournemouth</dd>
+                        </div>
+                        <div>
+                            <dt>Dates attended:</dt>
+                            <dd>September 2009 - June 2012</dd>
+                        </div>
+                    </dl>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="references">
+            <h2>References</h2>
+            <p>Available upon request</p>
+        </section>
+    </main>
+
+    <footer>
+        <hr />
+        <small>&copy; 2017 Joel Carr Ltd | Company number: 10514739</small>
+    </footer>
+
+    <script>
+        var _gaq=[['_setAccount','UA-19925716-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+</body>
+</html>
