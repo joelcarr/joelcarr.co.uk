@@ -3,46 +3,42 @@ html {
 }
 
 body {
-    font-family: Georgia, serif;
-    font-size: 16px;
+    font: normal 16px/24px Georgia, serif;
     margin: 0;
-    padding: 0 20px 20px 20px;
     max-width: 768px;
-}
-
-h1, h2, h3, h4 {
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
+    padding: 0 16px 16px 16px;
 }
 
 h1 {
-    font-size: 3rem;
+    font: bold 48px/64px Helvetica, sans-serif;
+    margin: 32px 0 0 0;
 }
 
 h2 {
-    font-size: 2.25rem;
+    font: bold 32px/40px Helvetica, sans-serif;
+    margin: 32px 0 0 0;
 }
 
 h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 1.25rem;
+    font: bold 24px/32px Helvetica, sans-serif;
+    margin: 32px 0 0 0;
 }
 
 p {
-    line-height: 1.6rem;
+    margin: 16px 0 0 0;
 }
 
 small {
-    font-size: .75em;
+    font: bold 16px/24px Helvetica, sans-serif;
+    margin: 32px 0 0 0;
 }
 
 a {
+    border-color: #507DBC;
+    border-style: dotted;
+    border-width: 0 0 2px 0;
     color: #507DBC;
     font-weight: bold;
-    border-bottom: 2px dotted #507DBC;
     text-decoration: none;
     transition: color 250ms ease, background-color 250ms ease, border-color 250ms ease;
 }
@@ -50,33 +46,37 @@ a {
     a:hover,
     a:active,
     a:focus {
-        color: #A1C6EA;
         border-color: #FFF;
+        color: #A1C6EA;
     }
+
+dl {
+    margin: 16px 0 0 0;
+}
 
 dt, dd {
     display: inline;
-    line-height: 1.5em;
 }
 
 dt {
-    font-weight: bold;
+    font: bold 16px/24px Georgia, serif;
 }
 
 dd {
+    font: normal 16px/24px Georgia, serif;
     margin-left: 4px;
 }
 
 .unstyled-list {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 .inline-list {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
     .inline-list li {
