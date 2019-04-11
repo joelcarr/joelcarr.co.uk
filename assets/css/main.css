@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  font: normal 1rem/1.5rem Georgia, serif;
+  font: normal 1rem/1.5rem system-ui;
   margin: 0;
   max-width: 48rem;
   padding: 0 1rem 1rem 1rem;
@@ -68,11 +68,11 @@ dd {
 }
 
 dt {
-  font: bold 1rem/1.5rem Georgia, serif;
+  font: bold 1rem/1.5rem system-ui;
 }
 
 dd {
-  font: normal 1rem/1.5rem Georgia, serif;
+  font: normal 1rem/1.5rem system-ui;
   margin-left: 0.25rem;
 }
 
