@@ -1,0 +1,24 @@
+{
+  "name": "joelcarr.co.uk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelcarr/joelcarr.co.uk.git"
+  },
+  "author": "Joel Carr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelcarr/joelcarr.co.uk/issues"
+  },
+  "homepage": "https://github.com/joelcarr/joelcarr.co.uk#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}
