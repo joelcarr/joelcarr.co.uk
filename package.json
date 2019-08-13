@@ -1,24 +1,32 @@
 {
   "name": "joelcarr.co.uk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelcarr/joelcarr.co.uk.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
     "serve": "eleventy --serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joelcarr/joelcarr.co.uk.git"
-  },
-  "author": "Joel Carr",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/joelcarr/joelcarr.co.uk/issues"
-  },
-  "homepage": "https://github.com/joelcarr/joelcarr.co.uk#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.8.3"
+  },
+  "devDependencies": {
+    "husky": "^3.0.3",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
