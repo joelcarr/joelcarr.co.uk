@@ -1,5 +1,5 @@
 ---
-title: The Cindy Press
+title: Joel Carr | Contract Front End Developer
 layout: base
 ---
 
