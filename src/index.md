@@ -6,14 +6,14 @@ layout: base
 # Joel Carr
 
 | Contact details |                                                              |
-| --------------- | ------------------------------------------------------------ |
+| :-------------- | ------------------------------------------------------------ |
 | Email           | [hello@joelcarr.co.uk](mailto:hello@joelcarr.co.uk)          |
 | Github          | [https://github.com/joelcarr](https://github.com/joelcarr)   |
 | Twitter         | [https://twitter.com/joelcarr](https://twitter.com/joelcarr) |
 
 ## Personal Statement
 
-I am a contract web developer, specialising in Front End, with over 6 years experience in product startups, charity, and fast-paced digital agencies. My ability to quickly learn new coding practices and environments aids the delivery of advanced and high quality products for my clients and their users. I deeply care about the user and developer experience for the products I work on.
+I am a contract web developer, specialising in Front End, with over 7 years experience in product startups, charity, and fast-paced digital agencies. My ability to quickly learn new coding practices and environments aids the delivery of advanced and high quality products for my clients and their users. I deeply care about the user and developer experience for the products I work on.
 
 ## Professional Experience
 
@@ -26,7 +26,7 @@ I am a contract web developer, specialising in Front End, with over 6 years expe
   - CircleCI
   - Cucumber
   - Design systems
-  - ES2017
+  - ES2017+
   - ESLint
   - Gatsby
   - Heroku
@@ -49,7 +49,7 @@ I am a contract web developer, specialising in Front End, with over 6 years expe
   - Babel
   - Chai
   - Cucumber
-  - ES6
+  - ES6+
   - ESLint
   - Gulp
   - Mocha
@@ -107,7 +107,7 @@ I am a contract web developer, specialising in Front End, with over 6 years expe
 ## Education
 
 | Course                       | Location               | Awarded                       | Dates attended             |
-| ---------------------------- | ---------------------- | ----------------------------- | -------------------------- |
+| :--------------------------- | :--------------------- | :---------------------------- | :------------------------- |
 | Interactive Media Production | Bournemouth University | BA (Hons) First Class Honours | September 2009 - June 2012 |
 
-**© 2019 Joel Carr Ltd | Company number: 10514739**
+**© 2020 Joel Carr Ltd | Company number: 10514739**
