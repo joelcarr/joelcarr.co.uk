@@ -17,7 +17,25 @@ I am a contract web developer, specialising in Front End, with over 7 years expe
 
 ## Professional Experience
 
-- ### [Barnardo's](http://www.barnardos.org.uk/) _(September 2017 - August 2018, January 2019 - June 2019)_
+- ### [Friday (part of PA Consulting)](https://wearefriday.com/) _(August 2019 - December 2019)_
+
+  At Friday (PA Consulting), I worked with their client 'Nokia' to build [a new site](https://www.nokia.com/shop) to display a their new range of products. As this was Friday’s first Drupal 8 project, I ensured the front end was structured in a way to be as familiar as possible to front end developers without any Drupal experience and maintaining Drupal’s standards. A front end developer could build out components using [Fractal](https://fractal.build/), independently from Drupal, and the Drupal build could use the same component template. I also ensured the front end code followed at least [WCAG’s AA accessibility guidelines](https://www.w3.org/TR/WCAG21/) and the [latest performance techniques](https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/#assets-optimizations) where possible.
+
+  #### Worked with:
+
+  - Acquia Cloud
+  - Drupal 8
+  - ES2017+
+  - ESLint
+  - Fractal
+  - Jenkins
+  - Jest
+  - Node
+  - npm
+  - SASS
+  - Stylelint
+
+- ### [Barnardo's](https://www.barnardos.org.uk/) _(September 2017 - August 2018, January 2019 - June 2019)_
 
   At Barnardo’s I am part of a new digital transformation team building researched prototypes aimed to assist service workers and children under Barnardo’s care. For example, a tool to build a legally sound consent form for research within Barnardo’s and a tool to assess the risk of a case. I am also part of helping the team grow by interviewing new developers, coaching junior developers, and writing clear documentation for each project.
 
