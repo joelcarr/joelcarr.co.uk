@@ -1,3 +1,8 @@
+---
+title: The Cindy Press
+layout: base
+---
+
 # Joel Carr
 
 | Contact details |                                                              |
