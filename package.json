@@ -11,7 +11,7 @@
     "serve": "eleventy --serve"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^1.0.2"
   },
   "devDependencies": {
     "husky": "^3.0.3",
