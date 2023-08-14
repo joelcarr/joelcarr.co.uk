@@ -5,35 +5,16 @@
 }
 
 html {
-  font-size: 93.75%;
   scroll-behavior: smooth;
-}
-
-@media (min-width: 36rem) {
-  html {
-    font-size: 100%;
-  }
-}
-
-@media (min-width: 40rem) {
-  html {
-    font-size: 106.25%;
-  }
-}
-
-@media (min-width: 44rem) {
-  html {
-    font-size: 112.5%;
-  }
 }
 
 body {
   font-family: system-ui;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.5rem;
+  line-height: 1.5;
   margin: 0;
-  max-width: 48rem;
+  max-width: 70ch;
   padding: 1rem;
 }
 
@@ -49,18 +30,6 @@ h1 {
   line-height: 4rem;
 }
 
-h2 {
-  font-size: 2rem;
-  line-height: 2.5rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-ul > li + li,
-li > * + *,
 .content > * + * {
   margin-top: 1em;
 }
