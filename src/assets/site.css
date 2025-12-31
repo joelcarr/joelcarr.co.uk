@@ -1,43 +1,43 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family: system-ui;
-	font-size: 1rem;
-	font-weight: normal;
-	line-height: 1.5;
-	margin: 0;
-	max-width: 70ch;
-	padding: 1rem;
+  font-family: system-ui;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 70ch;
+  padding: 1rem;
 }
 
 h1,
 h2,
 h3 {
-	font-family: Helvetica, sans-serif;
-	font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 h1 {
-	font-size: 3rem;
-	line-height: 4rem;
+  font-size: 3rem;
+  line-height: 4rem;
 }
 
 .content > * + * {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 
 ul {
-	padding-left: 1.5em;
+  padding-left: 1.5em;
 }
 
 li > ul > li {
-	margin-top: 0;
+  margin-top: 0;
 }
