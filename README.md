@@ -12,6 +12,12 @@ Install dependencies:
 npm install
 ```
 
+Install git hooks:
+
+```bash
+npx lefthook install
+```
+
 Run site locally:
 
 ```bash
