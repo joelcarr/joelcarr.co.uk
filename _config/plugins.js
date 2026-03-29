@@ -1,4 +1,21 @@
+const path = require("node:path");
+const postcss = require("postcss");
+const postcssImport = require("postcss-import");
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
-  // Plugins registered here as they are added
+  // Process CSS entry points through PostCSS (partials prefixed with _ are ignored by Eleventy)
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+    compile: async (inputContent, inputPath) => {
+      if (path.basename(inputPath).startsWith("_")) return;
+      return async () => {
+        const result = await postcss([postcssImport]).process(inputContent, {
+          from: inputPath,
+        });
+        return result.css;
+      };
+    },
+  });
 };

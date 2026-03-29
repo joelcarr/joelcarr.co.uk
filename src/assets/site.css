@@ -1,43 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@layer reset, tokens, base, components, utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: system-ui;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 70ch;
-  padding: 1rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 4rem;
-}
-
-.content > * + * {
-  margin-top: 1em;
-}
-
-ul {
-  padding-left: 1.5em;
-}
-
-li > ul > li {
-  margin-top: 0;
-}
+@import "./css/_reset.css";
+@import "./css/_tokens.css";
+@import "./css/_base.css";
+@import "./css/_components.css";
+@import "./css/_utilities.css";

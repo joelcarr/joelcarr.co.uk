@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
-    "@evilmartians/lefthook": "^1.11.13"
+    "@evilmartians/lefthook": "^1.11.13",
+    "postcss": "^8.5.8",
+    "postcss-import": "^16.1.1"
   }
 }
