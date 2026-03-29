@@ -171,6 +171,58 @@
     text-decoration: none;
   }
 
+  /* ---- Writing hub ---- */
+
+  .writing-hub__section {
+    margin-bottom: var(--space-12);
+  }
+
+  .writing-hub__type-heading {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .writing-hub__type-heading a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .writing-hub__type-desc {
+    color: var(--color-text-subtle);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-4);
+  }
+
+  .writing-hub__more {
+    display: inline-block;
+    margin-top: var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+
+  /* ---- Tag index ---- */
+
+  .tag-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    padding: 0;
+  }
+
+  .tag-index a {
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-subtle);
+  }
+
+  .tag-index a:hover {
+    color: var(--color-text);
+    border-color: var(--color-text-subtle);
+  }
+
   /* ---- Post ---- */
 
   .post__header {

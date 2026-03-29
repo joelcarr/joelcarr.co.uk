@@ -17,4 +17,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("year", (dateObj) => {
     return new Date(dateObj).getFullYear();
   });
+
+  eleventyConfig.addFilter("filterByTag", (posts, tag) =>
+    (posts || []).filter((p) => (p.data.tags || []).includes(tag))
+  );
 };

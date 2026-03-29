@@ -1,0 +1,33 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "Tagged: {{ tag }}"
+permalink: /tags/{{ tag }}/
+---
+<header class="listing__header">
+  <h1>Tagged: {{ tag }}</h1>
+  <p class="listing__description"><a href="/tags/">← All tags</a></p>
+</header>
+
+{% set taggedPosts = collections.allPosts | filterByTag(tag) %}
+{% if taggedPosts.length %}
+<ol class="post-list" role="list">
+  {% for post in taggedPosts %}
+  <li class="post-list__item">
+    {% if post.data.type != "note" %}
+    <a href="{{ post.url }}" class="post-list__title">{{ post.data.title }}</a>
+    {% else %}
+    <a href="{{ post.url }}" class="post-list__title post-list__title--note">Note — {{ post.data.date | readableDate }}</a>
+    {% endif %}
+    <time class="post-list__date" datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p>No posts with this tag.</p>
+{% endif %}
