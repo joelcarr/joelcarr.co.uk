@@ -1,13 +1,15 @@
-const { test, describe, before } = require("node:test");
-const assert = require("node:assert/strict");
-const path = require("node:path");
+import { test, describe, before } from "node:test";
+import assert from "node:assert/strict";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import Eleventy from "@11ty/eleventy";
 
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const OUTPUT_DIR = path.join(__dirname, "../_test-site");
 
 let results;
 
 before(async () => {
-  const { default: Eleventy } = await import("@11ty/eleventy");
   const elev = new Eleventy("src", OUTPUT_DIR, {
     configPath: path.join(__dirname, "../eleventy.config.js"),
     quietMode: true,

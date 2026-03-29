@@ -1,5 +1,5 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-GB", {
       year: "numeric",

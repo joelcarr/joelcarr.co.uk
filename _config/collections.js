@@ -1,5 +1,5 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addCollection("allPosts", (api) =>
     api
       .getAll()

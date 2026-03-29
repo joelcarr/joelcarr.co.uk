@@ -1,10 +1,9 @@
-const collections = require("./_config/collections");
-const filters = require("./_config/filters");
-const plugins = require("./_config/plugins");
+import collections from "./_config/collections.js";
+import filters from "./_config/filters.js";
+import plugins from "./_config/plugins.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = (eleventyConfig) => {
-  // Modules
+export default (eleventyConfig) => {
   collections(eleventyConfig);
   filters(eleventyConfig);
   plugins(eleventyConfig);

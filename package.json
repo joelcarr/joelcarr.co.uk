@@ -5,6 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/joelcarr/joelcarr.co.uk.git"
   },
+  "type": "module",
   "engines": {
     "node": "24.x"
   },

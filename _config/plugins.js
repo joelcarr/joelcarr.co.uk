@@ -1,28 +1,25 @@
-const path = require("node:path");
-const postcss = require("postcss");
-const postcssImport = require("postcss-import");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const Image = require("@11ty/eleventy-img");
+import path from "node:path";
+import postcss from "postcss";
+import postcssImport from "postcss-import";
+import { rssPlugin } from "@11ty/eleventy-plugin-rss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import Image from "@11ty/eleventy-img";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(pluginRss.rssPlugin);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
+export default (eleventyConfig) => {
+  eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Transform Markdown images through eleventy-img
-  eleventyConfig.addMarkdownHighlighter; // no-op reference to suppress unused import warning
   eleventyConfig.addTransform("eleventy-img", async (content, outputPath) => {
     if (!outputPath || !outputPath.endsWith(".html")) return content;
 
-    // Match <img> tags and replace with optimised picture elements
     const imgRegex = /<img([^>]*)src="([^"]+)"([^>]*)>/g;
     const replacements = [];
 
     for (const match of content.matchAll(imgRegex)) {
       const [full, before, src, after] = match;
 
-      // Skip data URIs and external images
       if (src.startsWith("data:") || src.startsWith("http")) continue;
 
       const altMatch = (before + after).match(/alt="([^"]*)"/);

@@ -1,6 +1,6 @@
 const isProduction = process.env.NODE_ENV === "production";
 
-module.exports = {
+export default {
   eleventyComputed: {
     eleventyExcludeFromCollections: (data) => {
       return isProduction && data.draft === true;
@@ -9,7 +9,6 @@ module.exports = {
       if (isProduction && data.draft === true) {
         return false;
       }
-      // Default permalink: let Eleventy use its own logic per subdirectory
       return data.permalink;
     },
   },
