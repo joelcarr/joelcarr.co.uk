@@ -1,5 +1,6 @@
 {
   "layout": "post.njk",
   "type": "til",
-  "tags": ["til"]
+  "tags": ["til"],
+  "permalink": "/til/{{ page.fileSlug }}/index.html"
 }
