@@ -6,25 +6,19 @@
     "url": "git+https://github.com/joelcarr/joelcarr.co.uk.git"
   },
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "prepare": "husky"
+    "check": "biome ci"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.7"
-  },
-  "lint-staged": {
-    "*.{js,css,json,md}": [
-      "biome check --write"
-    ]
+    "@evilmartians/lefthook": "^1.11.13"
   }
 }
