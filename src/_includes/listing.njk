@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+<header class="listing__header">
+  <h1>{{ title }}</h1>
+  {% if description %}<p class="listing__description">{{ description }}</p>{% endif %}
+</header>
+
+{% if pagination.items.length %}
+<ol class="post-list" role="list">
+  {% for post in pagination.items %}
+  <li class="post-list__item">
+    {% if post.data.type != "note" %}
+    <a href="{{ post.url }}" class="post-list__title">{{ post.data.title }}</a>
+    {% else %}
+    <a href="{{ post.url }}" class="post-list__title post-list__title--note">{{ post.data.date | readableDate }}</a>
+    {% endif %}
+    <time class="post-list__date" datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p>Nothing here yet.</p>
+{% endif %}
+
+{% if pagination.pages.length > 1 %}
+<nav class="pagination" aria-label="Pagination">
+  {% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}" class="pagination__link">← Newer</a>
+  {% endif %}
+  <span class="pagination__info">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+  {% if pagination.href.next %}
+  <a href="{{ pagination.href.next }}" class="pagination__link">Older →</a>
+  {% endif %}
+</nav>
+{% endif %}
