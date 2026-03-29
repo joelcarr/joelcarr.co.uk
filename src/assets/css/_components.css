@@ -199,6 +199,24 @@
     font-size: var(--font-size-sm);
   }
 
+  /* ---- Error page ---- */
+
+  .error-page {
+    text-align: center;
+    padding: var(--space-16) 0;
+  }
+
+  .error-page__heading {
+    font-size: var(--font-size-3xl);
+    color: var(--color-text-subtle);
+    margin-bottom: var(--space-4);
+  }
+
+  .error-page__message {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-6);
+  }
+
   /* ---- Tag index ---- */
 
   .tag-index {
