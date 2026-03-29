@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@biomejs/biome": "2.3.10",
     "@evilmartians/lefthook": "^1.11.13",
     "postcss": "^8.5.8",
