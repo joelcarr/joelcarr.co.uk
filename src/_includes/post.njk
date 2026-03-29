@@ -1,0 +1,10 @@
+---
+layout: base.njk
+---
+{% if type != "note" %}
+<h1>{{ title }}</h1>
+{% endif %}
+<time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+<div class="prose">
+  {{ content | safe }}
+</div>
