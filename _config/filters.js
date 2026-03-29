@@ -13,4 +13,8 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter("limit", (arr, n) => arr.slice(0, n));
+
+  eleventyConfig.addFilter("year", (dateObj) => {
+    return new Date(dateObj).getFullYear();
+  });
 };

@@ -1,3 +1,81 @@
 @layer components {
-  /* Populated as components are built */
+  /* ---- Layout shell ---- */
+
+  .site-header,
+  .site-footer {
+    border-color: var(--color-border);
+  }
+
+  .site-header {
+    border-bottom: 1px solid;
+    padding: var(--space-4) var(--content-padding);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+
+  .site-header__logo {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-text);
+    margin-right: auto;
+  }
+
+  .site-nav ul {
+    display: flex;
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+  }
+
+  .site-nav a {
+    color: var(--color-text-subtle);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+  }
+
+  .site-nav a:hover {
+    color: var(--color-text);
+  }
+
+  #main-content {
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding: var(--space-12) var(--content-padding);
+  }
+
+  .site-footer {
+    border-top: 1px solid;
+    padding: var(--space-6) var(--content-padding);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-subtle);
+  }
+
+  .site-footer__inner {
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+
+  /* ---- Theme toggle ---- */
+
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+    color: var(--color-text-subtle);
+    font-size: var(--font-size-sm);
+    line-height: 1;
+  }
+
+  .theme-toggle:hover {
+    color: var(--color-text);
+    border-color: var(--color-text-subtle);
+  }
 }
