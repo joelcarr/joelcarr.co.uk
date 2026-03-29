@@ -1,9 +1,12 @@
 const path = require("node:path");
 const postcss = require("postcss");
 const postcssImport = require("postcss-import");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addPlugin(pluginRss.rssPlugin);
+
   // Process CSS entry points through PostCSS (partials prefixed with _ are ignored by Eleventy)
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
