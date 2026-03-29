@@ -3,20 +3,22 @@ export default (eleventyConfig) => {
   eleventyConfig.addCollection("allPosts", (api) =>
     api
       .getAll()
-      .filter((p) => p.data.type && ["post", "note", "til"].includes(p.data.type))
-      .sort((a, b) => b.date - a.date)
+      .filter(
+        (p) => p.data.type && ["post", "note", "til"].includes(p.data.type),
+      )
+      .sort((a, b) => b.date - a.date),
   );
 
   eleventyConfig.addCollection("blogPosts", (api) =>
-    api.getFilteredByTag("post").sort((a, b) => b.date - a.date)
+    api.getFilteredByTag("post").sort((a, b) => b.date - a.date),
   );
 
   eleventyConfig.addCollection("notes", (api) =>
-    api.getFilteredByTag("note").sort((a, b) => b.date - a.date)
+    api.getFilteredByTag("note").sort((a, b) => b.date - a.date),
   );
 
   eleventyConfig.addCollection("tilPosts", (api) =>
-    api.getFilteredByTag("til").sort((a, b) => b.date - a.date)
+    api.getFilteredByTag("til").sort((a, b) => b.date - a.date),
   );
 
   // Tags from blog posts and TIL only (not notes)

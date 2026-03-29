@@ -1,6 +1,6 @@
-import { test, describe, before } from "node:test";
 import assert from "node:assert/strict";
 import path from "node:path";
+import { before, describe, test } from "node:test";
 import { fileURLToPath } from "node:url";
 import Eleventy from "@11ty/eleventy";
 
@@ -29,7 +29,7 @@ function getByUrlPrefix(prefix) {
 describe("Collections", () => {
   test("blog posts appear at /blog/[slug]/", () => {
     const posts = getByUrlPrefix("/blog/").filter(
-      (r) => r.url !== "/blog/" && !r.url.startsWith("/blog/page/")
+      (r) => r.url !== "/blog/" && !r.url.startsWith("/blog/page/"),
     );
     assert.ok(posts.length > 0, "expected at least one blog post");
     for (const post of posts) {
@@ -39,7 +39,7 @@ describe("Collections", () => {
 
   test("notes appear at /notes/[slug]/", () => {
     const notes = getByUrlPrefix("/notes/").filter(
-      (r) => r.url !== "/notes/" && !r.url.startsWith("/notes/page/")
+      (r) => r.url !== "/notes/" && !r.url.startsWith("/notes/page/"),
     );
     assert.ok(notes.length > 0, "expected at least one note");
     for (const note of notes) {
@@ -49,7 +49,7 @@ describe("Collections", () => {
 
   test("TIL posts appear at /til/[slug]/", () => {
     const tils = getByUrlPrefix("/til/").filter(
-      (r) => r.url !== "/til/" && !r.url.startsWith("/til/page/")
+      (r) => r.url !== "/til/" && !r.url.startsWith("/til/page/"),
     );
     assert.ok(tils.length > 0, "expected at least one TIL");
     for (const til of tils) {
@@ -61,7 +61,10 @@ describe("Collections", () => {
 describe("Draft exclusion", () => {
   test("draft post is present in dev build", () => {
     const draftPost = getByUrl("/blog/draft-post/");
-    assert.ok(draftPost, "draft post should be present when NODE_ENV is not production");
+    assert.ok(
+      draftPost,
+      "draft post should be present when NODE_ENV is not production",
+    );
   });
 
   test("draft post content contains expected text", () => {
@@ -69,7 +72,7 @@ describe("Draft exclusion", () => {
     assert.ok(draftPost, "draft post should exist");
     assert.ok(
       draftPost.content.includes("draft"),
-      "draft post content should mention 'draft'"
+      "draft post content should mention 'draft'",
     );
   });
 });
@@ -118,12 +121,12 @@ describe("RSS feed", () => {
   test("feed entries contain absolute URLs", () => {
     const feed = getByUrl("/feed.xml");
     const links = [...feed.content.matchAll(/<link href="([^"]+)"/g)].map(
-      (m) => m[1]
+      (m) => m[1],
     );
     for (const link of links) {
       assert.ok(
         link.startsWith("https://joelcarr.co.uk"),
-        `expected absolute URL, got: ${link}`
+        `expected absolute URL, got: ${link}`,
       );
     }
   });

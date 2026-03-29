@@ -9,7 +9,10 @@ export default (eleventyConfig) => {
   plugins(eleventyConfig);
 
   // Pass through static assets (CSS is handled by the PostCSS extension in plugins.js)
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" }, { filter: (p) => !p.endsWith(".css") });
+  eleventyConfig.addPassthroughCopy(
+    { "src/assets": "assets" },
+    { filter: (p) => !p.endsWith(".css") },
+  );
 
   return {
     dir: {

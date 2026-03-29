@@ -1,4 +1,4 @@
-(function () {
+(() => {
   const STORAGE_KEY = "theme";
   const root = document.documentElement;
 
@@ -42,21 +42,20 @@
   applyTheme(getStoredTheme());
 
   // Wire up the toggle button once the DOM is ready
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("theme-toggle");
     if (!btn) return;
 
     function updateButton() {
-      const effective =
-        getStoredTheme() || getSystemTheme();
+      const effective = getStoredTheme() || getSystemTheme();
       btn.setAttribute(
         "aria-label",
-        effective === "dark" ? "Switch to light mode" : "Switch to dark mode"
+        effective === "dark" ? "Switch to light mode" : "Switch to dark mode",
       );
       btn.textContent = effective === "dark" ? "☀" : "☾";
     }
 
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", () => {
       const stored = getStoredTheme();
       const system = getSystemTheme();
       const effective = stored || system;

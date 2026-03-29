@@ -1,9 +1,9 @@
 import path from "node:path";
-import postcss from "postcss";
-import postcssImport from "postcss-import";
+import Image from "@11ty/eleventy-img";
 import { rssPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import Image from "@11ty/eleventy-img";
+import postcss from "postcss";
+import postcssImport from "postcss-import";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default (eleventyConfig) => {

@@ -66,30 +66,47 @@
   .token.comment,
   .token.prolog,
   .token.doctype,
-  .token.cdata { color: var(--syntax-comment); font-style: italic; }
+  .token.cdata {
+    color: var(--syntax-comment);
+    font-style: italic;
+  }
 
   .token.keyword,
   .token.rule,
-  .token.at-rule { color: var(--syntax-keyword); }
+  .token.at-rule {
+    color: var(--syntax-keyword);
+  }
 
   .token.string,
-  .token.attr-value { color: var(--syntax-string); }
+  .token.attr-value {
+    color: var(--syntax-string);
+  }
 
   .token.number,
   .token.boolean,
-  .token.constant { color: var(--syntax-number); }
+  .token.constant {
+    color: var(--syntax-number);
+  }
 
   .token.function,
-  .token.class-name { color: var(--syntax-function); }
+  .token.class-name {
+    color: var(--syntax-function);
+  }
 
   .token.property,
   .token.attr-name,
-  .token.selector { color: var(--syntax-property); }
+  .token.selector {
+    color: var(--syntax-property);
+  }
 
   .token.operator,
-  .token.entity { color: var(--syntax-operator); }
+  .token.entity {
+    color: var(--syntax-operator);
+  }
 
   .token.punctuation,
   .token.tag,
-  .token.namespace { color: var(--syntax-punctuation); }
+  .token.namespace {
+    color: var(--syntax-punctuation);
+  }
 }

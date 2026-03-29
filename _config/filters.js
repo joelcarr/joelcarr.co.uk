@@ -19,6 +19,6 @@ export default (eleventyConfig) => {
   });
 
   eleventyConfig.addFilter("filterByTag", (posts, tag) =>
-    (posts || []).filter((p) => (p.data.tags || []).includes(tag))
+    (posts || []).filter((p) => (p.data.tags || []).includes(tag)),
   );
 };
