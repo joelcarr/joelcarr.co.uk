@@ -1,9 +1,16 @@
+const collections = require("./_config/collections");
+const filters = require("./_config/filters");
+const plugins = require("./_config/plugins");
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPassthroughCopy("src/assets/site.css");
-  eleventyConfig.setBrowserSyncConfig({
-    files: "assets/",
-  });
+  // Modules
+  collections(eleventyConfig);
+  filters(eleventyConfig);
+  plugins(eleventyConfig);
+
+  // Pass through static assets
+  eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
     dir: {
