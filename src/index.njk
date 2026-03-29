@@ -1,0 +1,33 @@
+---
+title: Joel Carr
+layout: base.njk
+---
+<section class="intro">
+  <h1 class="intro__title">Joel Carr</h1>
+  <p class="intro__bio">Engineering Manager and Technical Lead at Financial Times.</p>
+  <ul class="intro__links" role="list">
+    <li><a href="https://github.com/joelcarr">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/carrjoel/">LinkedIn</a></li>
+    <li><a href="https://bsky.app/profile/joelcarr.co.uk">Bluesky</a></li>
+  </ul>
+</section>
+
+{% set recentPosts = collections.allPosts | limit(5) %}
+{% if recentPosts.length %}
+<section class="recent-writing">
+  <h2 class="recent-writing__heading">Recent writing</h2>
+  <ol class="post-list" role="list">
+    {% for post in recentPosts %}
+    <li class="post-list__item">
+      {% if post.data.type != "note" %}
+      <a href="{{ post.url }}" class="post-list__title">{{ post.data.title }}</a>
+      {% else %}
+      <a href="{{ post.url }}" class="post-list__title post-list__title--note">Note — {{ post.data.date | readableDate }}</a>
+      {% endif %}
+      <time class="post-list__date" datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+    </li>
+    {% endfor %}
+  </ol>
+  <a href="/writing/" class="recent-writing__more">All writing →</a>
+</section>
+{% endif %}

@@ -79,6 +79,41 @@
     border-color: var(--color-text-subtle);
   }
 
+  /* ---- Homepage ---- */
+
+  .intro {
+    margin-bottom: var(--space-12);
+  }
+
+  .intro__title {
+    margin-bottom: var(--space-3);
+  }
+
+  .intro__bio {
+    color: var(--color-text-subtle);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+  }
+
+  .intro__links {
+    display: flex;
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  .recent-writing__heading {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-6);
+  }
+
+  .recent-writing__more {
+    display: inline-block;
+    margin-top: var(--space-6);
+    font-size: var(--font-size-sm);
+  }
+
   /* ---- Listing ---- */
 
   .listing__header {
