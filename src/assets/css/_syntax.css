@@ -1,15 +1,27 @@
 @layer base {
   :root {
-    --syntax-bg: light-dark(#f5f5f4, #1c1917);
-    --syntax-text: light-dark(#1c1917, #e7e5e4);
-    --syntax-comment: light-dark(#78716c, #a8a29e);
-    --syntax-keyword: light-dark(#7c3aed, #c084fc);
-    --syntax-string: light-dark(#16a34a, #86efac);
-    --syntax-number: light-dark(#ea580c, #fb923c);
-    --syntax-function: light-dark(#0369a1, #7dd3fc);
-    --syntax-property: light-dark(#0369a1, #7dd3fc);
-    --syntax-operator: light-dark(#be185d, #f9a8d4);
-    --syntax-punctuation: light-dark(#57534e, #a8a29e);
+    /* Color primitives */
+    --violet-700: #7c3aed;
+    --purple-400: #c084fc;
+    --green-600: #16a34a;
+    --green-300: #86efac;
+    --orange-600: #ea580c;
+    --orange-400: #fb923c;
+    --sky-700: #0369a1;
+    --sky-300: #7dd3fc;
+    --pink-700: #be185d;
+    --pink-300: #f9a8d4;
+
+    --syntax-bg: light-dark(var(--stone-100), var(--stone-900));
+    --syntax-text: light-dark(var(--stone-900), var(--stone-200));
+    --syntax-comment: light-dark(var(--stone-500), var(--stone-400));
+    --syntax-keyword: light-dark(var(--violet-700), var(--purple-400));
+    --syntax-string: light-dark(var(--green-600), var(--green-300));
+    --syntax-number: light-dark(var(--orange-600), var(--orange-400));
+    --syntax-function: light-dark(var(--sky-700), var(--sky-300));
+    --syntax-property: light-dark(var(--sky-700), var(--sky-300));
+    --syntax-operator: light-dark(var(--pink-700), var(--pink-300));
+    --syntax-punctuation: light-dark(var(--stone-600), var(--stone-400));
   }
 
   /* Prism token overrides using custom properties */
