@@ -1,43 +1,15 @@
 @layer base {
   :root {
-    --syntax-bg: #f5f5f4;
-    --syntax-text: #1c1917;
-    --syntax-comment: #78716c;
-    --syntax-keyword: #7c3aed;
-    --syntax-string: #16a34a;
-    --syntax-number: #ea580c;
-    --syntax-function: #0369a1;
-    --syntax-property: #0369a1;
-    --syntax-operator: #be185d;
-    --syntax-punctuation: #57534e;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --syntax-bg: #1c1917;
-      --syntax-text: #e7e5e4;
-      --syntax-comment: #a8a29e;
-      --syntax-keyword: #c084fc;
-      --syntax-string: #86efac;
-      --syntax-number: #fb923c;
-      --syntax-function: #7dd3fc;
-      --syntax-property: #7dd3fc;
-      --syntax-operator: #f9a8d4;
-      --syntax-punctuation: #a8a29e;
-    }
-  }
-
-  [data-theme="dark"] {
-    --syntax-bg: #1c1917;
-    --syntax-text: #e7e5e4;
-    --syntax-comment: #a8a29e;
-    --syntax-keyword: #c084fc;
-    --syntax-string: #86efac;
-    --syntax-number: #fb923c;
-    --syntax-function: #7dd3fc;
-    --syntax-property: #7dd3fc;
-    --syntax-operator: #f9a8d4;
-    --syntax-punctuation: #a8a29e;
+    --syntax-bg: light-dark(#f5f5f4, #1c1917);
+    --syntax-text: light-dark(#1c1917, #e7e5e4);
+    --syntax-comment: light-dark(#78716c, #a8a29e);
+    --syntax-keyword: light-dark(#7c3aed, #c084fc);
+    --syntax-string: light-dark(#16a34a, #86efac);
+    --syntax-number: light-dark(#ea580c, #fb923c);
+    --syntax-function: light-dark(#0369a1, #7dd3fc);
+    --syntax-property: light-dark(#0369a1, #7dd3fc);
+    --syntax-operator: light-dark(#be185d, #f9a8d4);
+    --syntax-punctuation: light-dark(#57534e, #a8a29e);
   }
 
   /* Prism token overrides using custom properties */
