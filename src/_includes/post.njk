@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+<article class="post">
+  {% if type != "note" %}
+  <header class="post__header">
+    <h1 class="post__title">{{ title }}</h1>
+    <div class="post__meta">
+      <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+      {% if tags and type != "note" %}
+      <ul class="post__tags" role="list">
+        {% for tag in tags %}
+          {% if tag != type %}
+          <li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </header>
+  {% else %}
+  <time class="post__date" datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+  {% endif %}
+
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

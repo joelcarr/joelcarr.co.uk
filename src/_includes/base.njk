@@ -3,12 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{% if title %}{{ title }} — Joel Carr{% else %}Joel Carr{% endif %}</title>
     <link rel="stylesheet" href="/assets/site.css">
+    <script src="/assets/js/theme.js"></script>
   </head>
   <body>
-    <main class="content">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="/" class="site-header__logo">Joel Carr</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul role="list">
+            <li><a href="/writing/">Writing</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme" type="button">☾</button>
+      </div>
+    </header>
+
+    <main id="main-content">
       {{ content | safe }}
     </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>© {{ page.date | year }} Joel Carr</p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,10 @@
+---
+title: Notes
+layout: listing.njk
+description: Short, unpolished thoughts.
+pagination:
+  data: collections.notes
+  size: 20
+  alias: posts
+permalink: "{% if pagination.pageNumber == 0 %}/notes/{% else %}/notes/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---

@@ -1,0 +1,10 @@
+---
+title: TIL
+layout: listing.njk
+description: Today I Learned — quick discoveries worth writing down.
+pagination:
+  data: collections.tilPosts
+  size: 20
+  alias: posts
+permalink: "{% if pagination.pageNumber == 0 %}/til/{% else %}/til/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---

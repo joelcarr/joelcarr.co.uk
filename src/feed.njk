@@ -1,0 +1,25 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Joel Carr</title>
+  <subtitle>Engineering Manager and Technical Lead at Financial Times.</subtitle>
+  <link href="https://joelcarr.co.uk/feed.xml" rel="self"/>
+  <link href="https://joelcarr.co.uk/"/>
+  <updated>{{ collections.allPosts | first | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://joelcarr.co.uk/</id>
+  <author>
+    <name>Joel Carr</name>
+  </author>
+  {% for post in collections.allPosts | limit(20) %}
+  <entry>
+    <title>{% if post.data.title %}{{ post.data.title | escape }}{% else %}Note — {{ post.data.date | readableDate }}{% endif %}</title>
+    <link href="https://joelcarr.co.uk{{ post.url }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>https://joelcarr.co.uk{{ post.url }}</id>
+    <content type="html"><![CDATA[{{ post.templateContent | transformWithHtmlBase("https://joelcarr.co.uk", post.url) }}]]></content>
+  </entry>
+  {% endfor %}
+</feed>

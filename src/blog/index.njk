@@ -1,0 +1,10 @@
+---
+title: Blog
+layout: listing.njk
+description: Long-form posts on engineering, management, and the web.
+pagination:
+  data: collections.blogPosts
+  size: 10
+  alias: posts
+permalink: "{% if pagination.pageNumber == 0 %}/blog/{% else %}/blog/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---

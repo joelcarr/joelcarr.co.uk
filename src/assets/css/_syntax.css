@@ -1,0 +1,96 @@
+@layer base {
+  :root {
+    /* Color primitives */
+    --violet-700: #7c3aed;
+    --purple-400: #c084fc;
+    --green-600: #16a34a;
+    --green-300: #86efac;
+    --orange-600: #ea580c;
+    --orange-400: #fb923c;
+    --sky-700: #0369a1;
+    --sky-300: #7dd3fc;
+    --pink-700: #be185d;
+    --pink-300: #f9a8d4;
+
+    --syntax-bg: light-dark(var(--stone-100), var(--stone-900));
+    --syntax-text: light-dark(var(--stone-900), var(--stone-200));
+    --syntax-comment: light-dark(var(--stone-500), var(--stone-400));
+    --syntax-keyword: light-dark(var(--violet-700), var(--purple-400));
+    --syntax-string: light-dark(var(--green-600), var(--green-300));
+    --syntax-number: light-dark(var(--orange-600), var(--orange-400));
+    --syntax-function: light-dark(var(--sky-700), var(--sky-300));
+    --syntax-property: light-dark(var(--sky-700), var(--sky-300));
+    --syntax-operator: light-dark(var(--pink-700), var(--pink-300));
+    --syntax-punctuation: light-dark(var(--stone-600), var(--stone-400));
+  }
+
+  /* Prism token overrides using custom properties */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    background: var(--syntax-bg);
+    color: var(--syntax-text);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    text-shadow: none;
+  }
+
+  pre[class*="language-"] {
+    padding: var(--space-4);
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    overflow-x: auto;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    background: var(--syntax-bg);
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--syntax-comment);
+    font-style: italic;
+  }
+
+  .token.keyword,
+  .token.rule,
+  .token.at-rule {
+    color: var(--syntax-keyword);
+  }
+
+  .token.string,
+  .token.attr-value {
+    color: var(--syntax-string);
+  }
+
+  .token.number,
+  .token.boolean,
+  .token.constant {
+    color: var(--syntax-number);
+  }
+
+  .token.function,
+  .token.class-name {
+    color: var(--syntax-function);
+  }
+
+  .token.property,
+  .token.attr-name,
+  .token.selector {
+    color: var(--syntax-property);
+  }
+
+  .token.operator,
+  .token.entity {
+    color: var(--syntax-operator);
+  }
+
+  .token.punctuation,
+  .token.tag,
+  .token.namespace {
+    color: var(--syntax-punctuation);
+  }
+}

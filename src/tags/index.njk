@@ -1,0 +1,18 @@
+---
+title: Tags
+layout: base.njk
+permalink: /tags/
+---
+<header class="listing__header">
+  <h1>Tags</h1>
+</header>
+
+{% if collections.tagList.length %}
+<ul class="tag-index" role="list">
+  {% for tag in collections.tagList %}
+  <li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No tags yet.</p>
+{% endif %}

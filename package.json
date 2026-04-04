@@ -5,11 +5,12 @@
     "type": "git",
     "url": "git+https://github.com/joelcarr/joelcarr.co.uk.git"
   },
+  "type": "module",
   "engines": {
     "node": "24.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test test/build.test.js",
     "build": "eleventy",
     "serve": "eleventy --serve",
     "check": "biome ci"
@@ -18,7 +19,12 @@
     "@11ty/eleventy": "^3.1.2"
   },
   "devDependencies": {
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@biomejs/biome": "2.3.10",
-    "@evilmartians/lefthook": "^1.11.13"
+    "@evilmartians/lefthook": "^1.11.13",
+    "postcss": "^8.5.8",
+    "postcss-import": "^16.1.1"
   }
 }

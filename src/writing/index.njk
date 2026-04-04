@@ -1,0 +1,60 @@
+---
+title: Writing
+layout: base.njk
+permalink: /writing/
+---
+<header class="listing__header">
+  <h1>Writing</h1>
+  <p class="listing__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Thoughts on engineering, leadership, and the web.</p>
+</header>
+
+<section class="writing-hub__section">
+  <h2 class="writing-hub__type-heading"><a href="/blog/">Blog</a></h2>
+  <p class="writing-hub__type-desc">Long-form posts on engineering and management.</p>
+  {% set posts = collections.blogPosts | limit(3) %}
+  {% if posts.length %}
+  <ol class="post-list" role="list">
+    {% for post in posts %}
+    <li class="post-list__item">
+      <a href="{{ post.url }}" class="post-list__title">{{ post.data.title }}</a>
+      <time class="post-list__date" datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  <a href="/blog/" class="writing-hub__more">All blog posts →</a>
+</section>
+
+<section class="writing-hub__section">
+  <h2 class="writing-hub__type-heading"><a href="/notes/">Notes</a></h2>
+  <p class="writing-hub__type-desc">Short, unpolished thoughts.</p>
+  {% set posts = collections.notes | limit(3) %}
+  {% if posts.length %}
+  <ol class="post-list" role="list">
+    {% for post in posts %}
+    <li class="post-list__item">
+      <a href="{{ post.url }}" class="post-list__title post-list__title--note">Note — {{ post.data.date | readableDate }}</a>
+      <time class="post-list__date" datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  <a href="/notes/" class="writing-hub__more">All notes →</a>
+</section>
+
+<section class="writing-hub__section">
+  <h2 class="writing-hub__type-heading"><a href="/til/">TIL</a></h2>
+  <p class="writing-hub__type-desc">Today I Learned — quick discoveries worth writing down.</p>
+  {% set posts = collections.tilPosts | limit(3) %}
+  {% if posts.length %}
+  <ol class="post-list" role="list">
+    {% for post in posts %}
+    <li class="post-list__item">
+      <a href="{{ post.url }}" class="post-list__title">{{ post.data.title }}</a>
+      <time class="post-list__date" datetime="{{ post.data.date | isoDate }}">{{ post.data.date | readableDate }}</time>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  <a href="/til/" class="writing-hub__more">All TILs →</a>
+</section>
