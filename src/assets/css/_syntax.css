@@ -1,6 +1,8 @@
 @layer base {
   :root {
     /* Color primitives */
+    --violet-700: #7c3aed;
+    --purple-400: #c084fc;
     --green-600: #16a34a;
     --green-300: #86efac;
     --orange-600: #ea580c;
@@ -10,19 +12,16 @@
     --pink-700: #be185d;
     --pink-300: #f9a8d4;
 
-    --syntax-bg: var(--color-bg-subtle);
-    --syntax-text: var(--color-text);
-    --syntax-comment: var(--color-text-subtle);
-    --syntax-keyword: light-dark(
-      var(--purple),
-      color-mix(in oklch, var(--purple) 70%, var(--cream))
-    );
+    --syntax-bg: light-dark(var(--stone-100), var(--stone-900));
+    --syntax-text: light-dark(var(--stone-900), var(--stone-200));
+    --syntax-comment: light-dark(var(--stone-500), var(--stone-400));
+    --syntax-keyword: light-dark(var(--violet-700), var(--purple-400));
     --syntax-string: light-dark(var(--green-600), var(--green-300));
     --syntax-number: light-dark(var(--orange-600), var(--orange-400));
     --syntax-function: light-dark(var(--sky-700), var(--sky-300));
     --syntax-property: light-dark(var(--sky-700), var(--sky-300));
     --syntax-operator: light-dark(var(--pink-700), var(--pink-300));
-    --syntax-punctuation: var(--color-text-subtle);
+    --syntax-punctuation: light-dark(var(--stone-600), var(--stone-400));
   }
 
   /* Prism token overrides using custom properties */
