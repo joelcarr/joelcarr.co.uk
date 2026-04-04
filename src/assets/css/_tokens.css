@@ -3,28 +3,38 @@
     color-scheme: light dark;
 
     /* Color primitives */
-    --white: #ffffff;
-    --stone-100: #f5f5f4;
-    --stone-200: #e7e5e4;
-    --stone-400: #a8a29e;
-    --stone-500: #78716c;
-    --stone-600: #57534e;
-    --stone-800: #292524;
-    --stone-900: #1c1917;
-    --stone-950: #0f0f0e;
-    --blue-300: #93c5fd;
-    --blue-400: #60a5fa;
-    --blue-600: #2563eb;
-    --blue-700: #1d4ed8;
+    --purple: #4341a2;
+    --cream: #f8fdf4;
 
     /* Colour palette */
-    --color-bg: light-dark(var(--white), var(--stone-950));
-    --color-bg-subtle: light-dark(var(--stone-100), var(--stone-900));
-    --color-text: light-dark(var(--stone-900), var(--stone-100));
-    --color-text-subtle: light-dark(var(--stone-500), var(--stone-400));
-    --color-border: light-dark(var(--stone-200), var(--stone-800));
-    --color-accent: light-dark(var(--blue-600), var(--blue-400));
-    --color-accent-hover: light-dark(var(--blue-700), var(--blue-300));
+    --color-bg: light-dark(
+      var(--cream),
+      color-mix(in oklch, var(--purple) 20%, black)
+    );
+    --color-bg-subtle: light-dark(
+      color-mix(in oklch, var(--cream) 92%, var(--purple)),
+      color-mix(in oklch, var(--purple) 32%, black)
+    );
+    --color-text: light-dark(
+      color-mix(in oklch, var(--purple) 80%, black),
+      var(--cream)
+    );
+    --color-text-subtle: light-dark(
+      color-mix(in oklch, var(--purple) 45%, var(--cream)),
+      color-mix(in oklch, var(--cream) 60%, var(--purple))
+    );
+    --color-border: light-dark(
+      color-mix(in oklch, var(--cream) 80%, var(--purple)),
+      color-mix(in oklch, var(--purple) 42%, black)
+    );
+    --color-accent: light-dark(
+      var(--purple),
+      color-mix(in oklch, var(--purple) 70%, var(--cream))
+    );
+    --color-accent-hover: light-dark(
+      color-mix(in oklch, var(--purple) 85%, black),
+      color-mix(in oklch, var(--purple) 55%, var(--cream))
+    );
 
     /* Fluid type scale */
     --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
