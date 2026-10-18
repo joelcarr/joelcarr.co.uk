@@ -3,11 +3,36 @@
   padding: 0;
 }
 
+:root {
+  color-scheme: light dark;
+  --color-text: #000;
+  --color-background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #e8e6e3;
+    --color-background: #121212;
+    --color-link: #8ab4f8;
+    --color-link-visited: #c58af9;
+  }
+
+  a:link {
+    color: var(--color-link);
+  }
+
+  a:visited {
+    color: var(--color-link-visited);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-family: system-ui;
   font-size: 1rem;
   font-weight: normal;
