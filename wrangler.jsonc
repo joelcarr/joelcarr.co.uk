@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "joelcarr-co-uk",
+  "compatibility_date": "2026-10-01",
+  // Static site only: Astro builds to dist/ and the Worker serves it as assets
+  "assets": {
+    "directory": "./dist"
+  },
+  // Required by `wrangler preview` (Workers Builds Preview command). Empty:
+  // Previews need no bindings or variables of their own.
+  "previews": {}
+}
