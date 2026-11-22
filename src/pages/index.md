@@ -1,6 +1,6 @@
 ---
 title: Joel Carr
-layout: base
+layout: ../layouts/Base.astro
 ---
 
 # Joel Carr
